@@ -1,0 +1,18 @@
+{
+  "streets":[
+    {
+      "name": "Badstraße",
+      "price": 1200,
+      "rent": 100,
+      "houseprice": 1000,
+      "multiplier": 1.5,
+      "mortgage": 1200,
+      "fieldindex": 1,
+      "color": {
+        "r": 128,
+        "g": 51,
+        "b": 153
+      }
+    }
+  ]
+}

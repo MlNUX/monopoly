@@ -1,0 +1,19 @@
+//<informationText><additionalText><Execution><parameter>
+//Execution -> getMoney, looseMoney, changeField, getCard, goPrison, freePrison, renovate, moneyFromEveryone, payOrGetCard
+//parameter -> double value, mutliple double value(double;double), integer value, nothing
+Du erhältst auf Vorzugs-Aktien 7% Dividende,DM 500,getMoney,500
+Gehe zurück nach der,Badstraße,changeField,1
+Bank-Irrtum zu Deinen Gunsten.,Ziehe DM 4000 ein.,getMoney,4000
+Einkommensteuer-Rückzahlung,Ziehe DM 400 ein,getMoney,400
+Du kommst aus dem Gefängnis frei.,Diese Karte muss behalten werden bis sie gebraucht oder verkauft wird.,freePrison,nothing
+Aus Lagerverkäufen erhälst Du,DM 100,getMoney,100
+Du hast den II. Preis in einer Schönheitskonkurrenz gewonnen.,Ziehe DM 200 ein.,getMoney,200
+Zahle an das Krankenhaus,DM 2000,looseMoney,2000
+Rücke vor bis auf,Los.,changeField,0
+Arzt-Kosten.,Zahle DM 100,looseMoney,100
+Es ist Dein Geburtstag.,Ziehe von jedem Spieler DM 200 ein.,moneyFromEveryone,200
+Zahle eine Strafe von DM 200,oder nimm eine Ereigniskarte.,payOrGetCard,200;event
+Zahle Deine Versicherungssumme.,DM 1000,looseMoney,1000
+Die Jahresrente wird fällig.,Ziehe DM 2000 ein.,getMoney,2000
+Du erbst,DM 2000,getMoney,2000
+Gehe in das Gefängnis. Begib Dich direkt dorthin. Gehe nicht über Los.,Ziehe nicht DM 4000 ein.,goPrison,nothing

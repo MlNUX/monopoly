@@ -1,0 +1,19 @@
+//<informationText><additionalText><Execution><parameter>
+//Execution -> getMoney, looseMoney, changeField, getCard, goPrison, freePrison, renovate, moneyFromEveryone, payOrGetCard
+//parameter -> double value, mutliple double value(double;double), integer value, nothing
+Die Bank zahlt Dir eine Dividende von,DM 1000,getMoney,1000
+Mache einen Ausflug nach dem West-Bahnhof.,und wenn Du über Los kommst. Ziehe DM 4000 ein.,getMoney,4000
+Gehe 3 Felder zurück,,changeField,-3
+Du wirst zu Straßenausbesserungen herangezogen. Zahle für Deine Häuser und Hotels,DM 800 je Haus DM 2300 je Hotel an die Bank.,renovate,800;2300
+Gehe in das Gefängnis. Begib dir direkt dorthin. Gehe nicht über Los.,Ziehe nicht DM 4000 ein.,goPrison,nothing
+Du hast in einem Kreuzworträtsel-Wettbewerb gewonnen.,Ziehe DM 2000 ein.,getMoney,2000
+Rücke vor bis zur,Schlossallee.,changeField,39
+Rücke vor bis zum Opernplatz.,Wenn du über Los kommst ziehe DM 4000 ein.,changeField,24
+Miete und Anleihzinsen werden fällig.,Die Bank zahlt Dir DM 3000.,getMoney,3000
+Rücke vor bis zur Seestraße.,Wenn du über Los kommst ziehe DM 4000 ein.,changeField,11
+Strafe für zu schnelles Fahren.,DM 300,looseMoney,300
+Lasse alle deine Häuser renovieren.,Zahle an die Bank: für jedes Haus DM 500 und für jedes Hotel DM 2000,renovate,500;2000
+Zahle Schulgeld,DM 3000,looseMoney,3000
+Rücke bis auf Los vor.,,changeField,0
+Du kommst aus dem Gefängnis frei.,Diese Karte muss behalten werden bis sie gebraucht oder verkauft wird.,freePrison,nothing
+Betrunken im Dienst.,Strafe DM 400,looseMoney,400
