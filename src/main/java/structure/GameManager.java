@@ -1,12 +1,12 @@
-package main.java.structure;
+package structure;
 
-import main.java.exception.CommandException;
-import main.java.exception.InputArgumentException;
-import main.java.exception.InputFileException;
-import main.java.playground.CommunityCard;
-import main.java.playground.EventCard;
-import main.java.playground.Field;
-import main.java.util.FileInputManager;
+import exception.CommandException;
+import exception.InputArgumentException;
+import exception.InputFileException;
+import playground.CommunityCard;
+import playground.EventCard;
+import playground.Field;
+import util.FileInputManager;
 
 import java.io.IOException;
 import java.util.List;

@@ -1,14 +1,14 @@
-package main.java.util;
+package util;
 
-import main.java.exception.InputFileException;
-import main.java.playground.CardExexution;
-import main.java.playground.CommunityCard;
-import main.java.playground.EventCard;
-import main.java.playground.Field;
-import main.java.playground.FieldExecution;
-import main.java.playground.SpecialField;
-import main.java.playground.Street;
-import main.java.playground.Trainstation;
+import exception.InputFileException;
+import playground.CardExexution;
+import playground.CommunityCard;
+import playground.EventCard;
+import playground.Field;
+import playground.FieldExecution;
+import playground.SpecialField;
+import playground.Street;
+import playground.Trainstation;
 
 import java.awt.Color;
 import java.io.BufferedReader;

@@ -1,9 +1,8 @@
-package main.java.structure;
+package structure;
 
-
-import main.java.exception.CommandException;
-import main.java.playground.BuyableField;
-import main.java.playground.Street;
+import exception.CommandException;
+import playground.BuyableField;
+import playground.Street;
 
 public final class Bank {
 

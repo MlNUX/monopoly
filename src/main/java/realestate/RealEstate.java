@@ -1,7 +1,6 @@
-package main.java.realestate;
+package realestate;
 
-
-import main.java.playground.Street;
+import playground.Street;
 
 public abstract class RealEstate {
 

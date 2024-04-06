@@ -1,9 +1,10 @@
-package main.java.command;
+package command;
 
-import main.java.exception.CommandException;
-import main.java.exception.InputArgumentException;
-import main.java.structure.GameManager;
-import main.java.structure.GamePhase;
+import command.Command;
+import exception.CommandException;
+import exception.InputArgumentException;
+import structure.GameManager;
+import structure.GamePhase;
 
 public class BuyHouseCommand implements Command {
 

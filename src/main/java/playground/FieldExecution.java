@@ -1,7 +1,7 @@
-package main.java.playground;
+package playground;
 
-import main.java.structure.Bank;
-import main.java.structure.Player;
+import structure.Bank;
+import structure.Player;
 
 public enum FieldExecution {
 

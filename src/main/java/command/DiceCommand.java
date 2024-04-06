@@ -1,9 +1,9 @@
-package main.java.command;
+package command;
 
 
-import main.java.exception.CommandException;
-import main.java.structure.GameManager;
-import main.java.structure.GamePhase;
+import exception.CommandException;
+import structure.GameManager;
+import structure.GamePhase;
 
 public class DiceCommand implements Command {
     private static final String COMMAND_NAME = "dice";

@@ -1,6 +1,6 @@
-import main.java.command.CommandHandler;
-import main.java.structure.GameManager;
-import main.java.util.Outputs;
+import command.CommandHandler;
+import structure.GameManager;
+import util.Outputs;
 
 public final class Main {
     private Main() {

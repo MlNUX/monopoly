@@ -1,4 +1,4 @@
-package main.java.playground;
+package playground;
 
 public abstract class Field {
 

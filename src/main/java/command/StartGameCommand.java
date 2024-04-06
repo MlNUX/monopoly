@@ -1,10 +1,9 @@
-package main.java.command;
+package command;
 
-
-import main.java.exception.InputArgumentException;
-import main.java.exception.InputFileException;
-import main.java.structure.GameManager;
-import main.java.structure.GamePhase;
+import exception.InputArgumentException;
+import exception.InputFileException;
+import structure.GameManager;
+import structure.GamePhase;
 
 import java.io.IOException;
 

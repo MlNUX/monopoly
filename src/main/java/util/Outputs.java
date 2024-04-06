@@ -1,18 +1,18 @@
-package main.java.util;
+package util;
 
 
-import main.java.command.BuyCommand;
-import main.java.command.BuyHouseCommand;
-import main.java.command.DiceCommand;
-import main.java.command.EndTurnCommand;
-import main.java.command.HelpCommand;
-import main.java.command.SetPlayerCommand;
-import main.java.command.ShowPlayerCommand;
-import main.java.command.StartCapitalCommand;
-import main.java.command.StartGameCommand;
-import main.java.playground.BuyableField;
-import main.java.structure.GamePhase;
-import main.java.structure.Player;
+import command.BuyCommand;
+import command.BuyHouseCommand;
+import command.DiceCommand;
+import command.EndTurnCommand;
+import command.HelpCommand;
+import command.SetPlayerCommand;
+import command.ShowPlayerCommand;
+import command.StartCapitalCommand;
+import command.StartGameCommand;
+import playground.BuyableField;
+import structure.GamePhase;
+import structure.Player;
 
 public final class Outputs {
 

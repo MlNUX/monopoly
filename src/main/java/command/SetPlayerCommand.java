@@ -1,7 +1,7 @@
-package main.java.command;
+package command;
 
-import main.java.structure.GameManager;
-import main.java.structure.GamePhase;
+import structure.GameManager;
+import structure.GamePhase;
 
 public final class SetPlayerCommand implements Command {
     private static final String ARGUMENT_LENGTH_ERROR = "wrong argumentlength!";

@@ -1,16 +1,17 @@
-package main.java.structure;
+package structure;
 
-import main.java.exception.CommandException;
-import main.java.exception.InputArgumentException;
-import main.java.playground.BuyableField;
-import main.java.playground.Field;
-import main.java.playground.SpecialField;
-import main.java.playground.Street;
-import main.java.playground.Trainstation;
-import main.java.realestate.Hotel;
-import main.java.realestate.House;
-import main.java.realestate.RealEstate;
-import main.java.util.Outputs;
+
+import exception.CommandException;
+import exception.InputArgumentException;
+import playground.BuyableField;
+import playground.Field;
+import playground.SpecialField;
+import playground.Street;
+import playground.Trainstation;
+import realestate.Hotel;
+import realestate.House;
+import realestate.RealEstate;
+import util.Outputs;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -192,7 +193,7 @@ public class Player {
         return true;
 
     }
-
+    //knast variable
     public String goPrison() {
         currentField = 10;
         inJail = true;

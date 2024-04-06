@@ -1,7 +1,0 @@
-//<name><price><rent><multiplier><hypotek><fieldindex>
-Südbahnhof,4000,500,2,1500,5
-Westbahnhof,4000,500,2,1500,15
-Nordbahnhof,4000,500,2,1500,25
-Hauptbahnhof,4000,500,2,1500,35
-Wasser Werk,3000,4,10,1500,28
-Elektrizitäts Werk,3000,4,10,1500,12

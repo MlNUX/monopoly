@@ -1,7 +1,7 @@
-package main.java.playground;
+package playground;
 
 
-import main.java.structure.Player;
+import structure.Player;
 
 import java.awt.Color;
 

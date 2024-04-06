@@ -1,9 +1,8 @@
-package main.java.command;
+package command;
 
-
-import main.java.structure.GameManager;
-import main.java.structure.GamePhase;
-import main.java.util.Outputs;
+import structure.GameManager;
+import structure.GamePhase;
+import util.Outputs;
 
 public final class HelpCommand implements Command {
 
