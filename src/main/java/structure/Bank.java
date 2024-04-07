@@ -10,6 +10,7 @@ public final class Bank {
     private static final String MONEY_ERROR = "you have not enough money!";
     private static final String BANK = "Bank";
     private static final String DOUBLE_FORMAT = "%.2f";
+    private static final String CENTER_IS_EMPTY = "center is empty";
     private static double center = 0;
     private static final String CENTER = "Center";
 
@@ -58,6 +59,17 @@ public final class Bank {
                 + priceHotel * target.getHotelAmmount();
         target.removeMoney(payedMoney);
         return TRANSFER_MESSAGE.formatted(target.getName(), CENTER, String.format(DOUBLE_FORMAT, payedMoney));
+    }
+
+    public static String centerMoney(Player target) {
+        if (center > 0) {
+            double tempMoney = center;
+            target.addMoney(center);
+            center = 0;
+            return TRANSFER_MESSAGE.formatted(CENTER, target.getName(), String.format(DOUBLE_FORMAT, tempMoney));
+        } else {
+            return CENTER_IS_EMPTY;
+        }
     }
 
     public static String moneyFormEveryone(Player receiver, double money) {

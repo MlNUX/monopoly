@@ -5,7 +5,13 @@ import structure.Player;
 
 public enum FieldExecution {
 
-    GETMONEY((executor, parameter) -> Bank.getMoney(executor, Double.parseDouble(parameter))),
+    GETMONEY((executor, parameter) -> {
+        if (parameter.equals("freeMoney")) {
+            return Bank.centerMoney(executor);
+        } else {
+            return Bank.getMoney(executor, Double.parseDouble(parameter));
+        }
+    }),
     LOOSEMONEY((executor, parameter) -> Bank.looseMoney(executor, Double.parseDouble(parameter))),
     GOPRISON((executor, ignored) -> executor.goPrison()),
     GETCARD((executor, parameter) -> {

@@ -14,7 +14,7 @@ import java.util.Random;
 import java.util.random.RandomGenerator;
 
 public class GameManager {
-    private static final String DEFAULT_PATH = "C:\\Users\\lbgam\\Documents\\Uni\\Programmieren\\abschluss\\Monopoly\\src\\main\\resources\\config";
+    private static final String DEFAULT_PATH = "src\\main\\resources\\config";
     private static final String INITIALIZING_PLAYER_ERROR = "Players not initialized!";
     private static final String EXIST_ERROR = "player doesn't exist!";
     private Player[] players;

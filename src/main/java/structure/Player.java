@@ -115,7 +115,7 @@ public class Player {
     }
 
     public String makeNextMove() throws CommandException {
-        if (hasTry) {
+        if (hasTry && !inJail) {
             StringBuilder builder = new StringBuilder();
             RandomGenerator random = new Random();
             int firstDice = random.nextInt(6) + 1;
@@ -146,6 +146,16 @@ public class Player {
                 builder.append(field.execute(this));
             }
             return builder.toString();
+        } else if (hasTry) {
+            RandomGenerator random = new Random();
+            int firstDice = random.nextInt(6) + 1;
+            int secondDice = random.nextInt(6) + 1;
+            if (firstDice != secondDice) {
+                return "looser!";
+            } else {
+                inJail = false;
+            }
+            hasTry = false;
         }
         throw new CommandException(TRY_ERROR);
     }
@@ -193,6 +203,7 @@ public class Player {
         return true;
 
     }
+
     //knast variable
     public String goPrison() {
         currentField = 10;
