@@ -1,6 +1,10 @@
 package util;
 
 import exception.InputFileException;
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import playground.CardExexution;
 import playground.CommunityCard;
 import playground.EventCard;
@@ -9,6 +13,7 @@ import playground.FieldExecution;
 import playground.SpecialField;
 import playground.Street;
 import playground.Trainstation;
+import structure.GameManager;
 
 import java.awt.Color;
 import java.io.BufferedReader;
@@ -29,13 +34,43 @@ public final class FileInputManager {
     private static final String COMMUNITYCARD_PATH = "\\communityconfig.txt";
     private static final String EVENTCARD_PATH = "\\eventconfig.txt";
     private static final String STREETSETCONFIG_PATH = "\\streetsetconfig.txt";
-    private static final int PLAYGROUND_SIZE = 40;
+    private static final int PLAYGROUND_SIZE = Integer.parseInt(GameManager.getProperties("gameGroundSize"));
     private static final String COMMAND_PREFIX = "//";
     private static final String SPLIT_REGEX = ",";
 
 
     private FileInputManager() {
     }
+/*
+    public static Field[] readoutFieldFile(String path) throws InputFileException, ParseException {
+        Field[] fields = new Field[PLAYGROUND_SIZE];
+        JSONObject obj = new JSONObject(path + "\\streets.json");
+
+        JSONArray streets = obj.getJSONArray("streets");
+        for (int i = 0; i < streets.length(); i++) {
+            Street street = Street.deserialize(streets.getJSONObject(i));
+            fields[street.getFieldIndex()] = street;
+        }
+        JSONArray stations = obj.getJSONArray("stations");
+        for (int i = 0; i < stations.length(); i++) {
+            Trainstation station = Trainstation.deserialize(stations.getJSONObject(i));
+            fields[station.getFieldIndex()] = station;
+        }
+        JSONArray specials = obj.getJSONArray("specialfield");
+        for (int i = 0; i < specials.length(); i++) {
+            SpecialField field = SpecialField.deserialize(specials.getJSONObject(i));
+            fields[field.getFieldIndex()] = field;
+        }
+
+        for (Field field : fields) {
+            if (field == null) {
+                throw new InputFileException(FILE_COMPLETE_ERROR);
+            }
+        }
+
+        return fields;
+    }
+*/
 
     public static Field[] readoutFieldFile(String path) throws InputFileException, IOException {
         Field[] playField = new Field[PLAYGROUND_SIZE];

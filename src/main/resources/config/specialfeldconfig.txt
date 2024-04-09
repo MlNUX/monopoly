@@ -9,7 +9,7 @@ Los,0,getMoney,8000
 Gemeinschaftsfeld,2,getCard,community
 Einkommensteuer,4,looseMoney,4000
 Ereignisfeld,7,getCard,event
-Nur zu Besuch | Gefängniss,10,nothing,null
+Nur zu Besuch | Gefängnis,10,nothing,null
 Gemeinschaftsfeld,17,getCard,community
 Frei Parken,20,getMoney,freeMoney
 Ereignisfeld,22,getCard,event
@@ -17,3 +17,8 @@ Gehen Sie in das Gefängins,30,goPrison,null
 Gemeinschaftsfeld,33,getCard,community
 Ereignisfeld,36,getCard,event
 Zusatzsteuer,38,looseMoney,2000
+Gemeinschaftsfeld,23,getCard,community
+Gemeinschaftsfeld,24,getCard,community
+Gemeinschaftsfeld,9,getCard,community
+Gemeinschaftsfeld,11,getCard,community
+Gemeinschaftsfeld,13,getCard,community

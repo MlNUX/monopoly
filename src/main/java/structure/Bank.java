@@ -12,6 +12,7 @@ public final class Bank {
     private static final String DOUBLE_FORMAT = "%.2f";
     private static final String CENTER_IS_EMPTY = "center is empty";
     private static double center = 0;
+    private static final double BAIL = Double.parseDouble(GameManager.getProperties("prisonBail"));
     private static final String CENTER = "Center";
 
     private Bank() {
@@ -76,4 +77,12 @@ public final class Bank {
         return "";
     }
 
+    public static String payBail(Player target) throws CommandException {
+        if (target.getMoney() >= BAIL) {
+            target.removeMoney(BAIL);
+            target.setInJail(false);
+            return TRANSFER_MESSAGE.formatted(target.getName(), CENTER, String.format(DOUBLE_FORMAT, BAIL));
+        }
+        throw new CommandException(MONEY_ERROR);
+    }
 }

@@ -83,6 +83,8 @@ public final class CommandHandler {
         this.addCommand(EndTurnCommand.getCommandName(), new EndTurnCommand());
         this.addCommand(ShowPlayerCommand.getCommandName(), new ShowPlayerCommand());
         this.addCommand(BuyHouseCommand.getCommandName(), new BuyHouseCommand());
+        this.addCommand(ShowNextFieldCommand.getCommandName(), new ShowNextFieldCommand());
+        this.addCommand(PayBailCommand.getCommandName(), new PayBailCommand());
     }
 
     private void addCommand(String commandName, Command command) {

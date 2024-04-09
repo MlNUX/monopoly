@@ -1,6 +1,7 @@
 package structure;
 
 
+import command.PayBailCommand;
 import exception.CommandException;
 import exception.InputArgumentException;
 import playground.BuyableField;
@@ -34,6 +35,7 @@ public class Player {
     private static final String SUCCESS_BUY_MESSAGE = "'%s' is now your Street!";
     private static final String NOBODY_STRING = "nobody";
     private static final String JAIL_MESSAGE = "%s is now in jail!";
+    private static final String PAY_BAIL_MESSAGE = "use %s to pay bail";
     private final String name;
     private List<BuyableField> streets;
     private final String playerSymbol;
@@ -130,7 +132,7 @@ public class Player {
                 if (field.getOwner() == null) {
                     builder.append(OWNER_MESSAGE.formatted(field.getName(), NOBODY_STRING)).append(System.lineSeparator());
                     builder.append(BUY_MESSAGE.formatted(field.getName(), String.format(DOUBLE_FORMAT, field.getPrice())));
-                } else if (!streets.contains(field)) {
+                } else if (!streets.contains(field) && !field.getOwner().isInJail()) {
                     builder.append(OWNER_MESSAGE.formatted(field.getName(), field.getOwner().name)).append(System.lineSeparator());
                     //set nicht richtig!
                     if (field.getOwner().hasCompleteSet(field)) {
@@ -151,13 +153,23 @@ public class Player {
             int firstDice = random.nextInt(6) + 1;
             int secondDice = random.nextInt(6) + 1;
             if (firstDice != secondDice) {
+                hasTry = false;
                 return "looser!";
             } else {
                 inJail = false;
+                hasTry = false;
+                return "winner!";
             }
-            hasTry = false;
         }
         throw new CommandException(TRY_ERROR);
+    }
+
+    private boolean isInJail() {
+        return inJail;
+    }
+
+    public void setInJail(boolean inJail) {
+        this.inJail = inJail;
     }
 
     public String buyStreet() throws CommandException {
@@ -208,7 +220,7 @@ public class Player {
     public String goPrison() {
         currentField = 10;
         inJail = true;
-        return JAIL_MESSAGE.formatted(name);
+        return JAIL_MESSAGE.formatted(name) + System.lineSeparator() + PAY_BAIL_MESSAGE.formatted(PayBailCommand.getCommandName());
     }
 
     public String buyHouse(String streetName) throws InputArgumentException, CommandException {
@@ -242,5 +254,13 @@ public class Player {
     @Override
     public String toString() {
         return Outputs.playerToString(this);
+    }
+
+    public String payBail() throws CommandException {
+        if (inJail) {
+            return Bank.payBail(this);
+        } else {
+            throw new CommandException("you're not in jail!");
+        }
     }
 }

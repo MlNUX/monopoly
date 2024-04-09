@@ -17,3 +17,8 @@ Zahle Schulgeld,DM 3000,looseMoney,3000
 Rücke bis auf Los vor.,,changeField,0
 Du kommst aus dem Gefängnis frei.,Diese Karte muss behalten werden bis sie gebraucht oder verkauft wird.,freePrison,nothing
 Betrunken im Dienst.,Strafe DM 400,looseMoney,400
+Du wurdest vom nigerianischem Prinzen gescamt.,Du verlierst deine ehre und 5000 DM.,looseMoney,5000
+Dein Onkel fordert dich auf dein Arschloch zu bleachen.,Du erhälst eine psychische Zwangsstörung.,nothing,nothing
+Dein Onkel hat dich unsittlich berührt.,Du zahlst 5k für deine Therapie.,looseMoney,5000
+Deine Freundin geht dir fremd.,Zahle ihre Beerdigung.,looseMoney,3500
+Du hast deine Freundin umgebracht,Gehe ins Gefängins,goPrison,nothing

@@ -7,6 +7,7 @@ import command.DiceCommand;
 import command.EndTurnCommand;
 import command.HelpCommand;
 import command.SetPlayerCommand;
+import command.ShowNextFieldCommand;
 import command.ShowPlayerCommand;
 import command.StartCapitalCommand;
 import command.StartGameCommand;
@@ -24,7 +25,6 @@ public final class Outputs {
     private static final String CURRENTFIELD_PREFIX = "Currentfield :  '%s'";
     private static final String OWNED_STREETS_PREFIX = "Owned Streets : ";
     private static final String STREET_FORMAT = "'%s'";
-    private static final String LAYOUT_FILE = "\\playGround.txt";
 
     private Outputs() {
     }
@@ -41,7 +41,8 @@ public final class Outputs {
                     + BuyCommand.getCommandName() + HELP_SEPERATOR_STRING + BuyCommand.getCommandSyntax() + System.lineSeparator()
                     + EndTurnCommand.getCommandName() + HELP_SEPERATOR_STRING + EndTurnCommand.getCommandSyntax() + System.lineSeparator()
                     + ShowPlayerCommand.getCommandName() + HELP_SEPERATOR_STRING + ShowPlayerCommand.getCommandSyntax() + System.lineSeparator()
-                    + BuyHouseCommand.getCommandName() + HELP_SEPERATOR_STRING + BuyHouseCommand.getCommandSyntax();
+                    + BuyHouseCommand.getCommandName() + HELP_SEPERATOR_STRING + BuyHouseCommand.getCommandSyntax() + System.lineSeparator()
+                    + ShowNextFieldCommand.getCommandName() + HELP_SEPERATOR_STRING + ShowNextFieldCommand.getCommandSyntax();
         }
     }
 

@@ -36,7 +36,8 @@ public enum CardExexution {
         return "";
     }),
     MONEYFROMEVERYONE((executor, parameter) ->
-            Bank.moneyFormEveryone(executor, Double.parseDouble(parameter)));
+            Bank.moneyFormEveryone(executor, Double.parseDouble(parameter))),
+    NOTHING((executor, parameter) -> "");
 
     private final SpecialCardEffect specialCardEffect;
 

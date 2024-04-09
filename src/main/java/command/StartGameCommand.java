@@ -2,6 +2,7 @@ package command;
 
 import exception.InputArgumentException;
 import exception.InputFileException;
+import org.json.simple.parser.ParseException;
 import structure.GameManager;
 import structure.GamePhase;
 
@@ -18,7 +19,7 @@ public final class StartGameCommand implements Command {
         try {
             manager.startGame();
             return new CommandResult(CommandResultType.SUCCESS, SUCCESS_MESSAGE);
-        } catch (InputArgumentException | IOException | InputFileException e) {
+        } catch (InputArgumentException | IOException | InputFileException | ParseException e) {
             return new CommandResult(CommandResultType.FAILURE, e.getMessage());
         }
 

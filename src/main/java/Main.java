@@ -7,8 +7,8 @@ public final class Main {
     }
 
     public static void main(String[] args) {
-        Outputs.sendMessage("Wellcome to Monopoly!");
-        GameManager manager = new GameManager(20000);
+        Outputs.sendMessage("Welcome to Monopoly!");
+        GameManager manager = new GameManager();
         CommandHandler handler = new CommandHandler(manager);
         handler.handleUserInput();
     }

@@ -1,18 +1,392 @@
 {
-  "streets":[
+  "streets": [
     {
       "name": "Badstraße",
       "price": 1200,
-      "rent": 100,
+      "rent": 40,
+      "houseprice": 1000,
+      "multiplier": 1.5,
+      "mortgage": 600,
+      "fieldindex": 1,
+      "r": 128,
+      "g": 51,
+      "b": 153
+    },
+    {
+      "name": "Turmstraße",
+      "price": 1200,
+      "rent": 80,
+      "houseprice": 1000,
+      "multiplier": 1.5,
+      "mortgage": 600,
+      "fieldindex": 3,
+      "r": 128,
+      "g": 51,
+      "b": 153
+    },
+    {
+      "name": "Chausseestraße",
+      "price": 2000,
+      "rent": 120,
+      "houseprice": 1000,
+      "multiplier": 1.5,
+      "mortgage": 1000,
+      "fieldindex": 6,
+      "r": 128,
+      "g": 204,
+      "b": 255
+    },
+    {
+      "name": "Elisenstraße",
+      "price": 2000,
+      "rent": 120,
+      "houseprice": 1000,
+      "multiplier": 1.5,
+      "mortgage": 1000,
+      "fieldindex": 8,
+      "r": 128,
+      "g": 204,
+      "b": 255
+    },
+    {
+      "name": "Poststraße",
+      "price": 2400,
+      "rent": 160,
       "houseprice": 1000,
       "multiplier": 1.5,
       "mortgage": 1200,
-      "fieldindex": 1,
-      "color": {
-        "r": 128,
-        "g": 51,
-        "b": 153
-      }
+      "fieldindex": 9,
+      "r": 128,
+      "g": 204,
+      "b": 255
+    },
+    {
+      "name": "Seestraße",
+      "price": 2800,
+      "rent": 200,
+      "houseprice": 2000,
+      "multiplier": 1.5,
+      "mortgage": 1400,
+      "fieldindex": 11,
+      "r": 204,
+      "g": 68,
+      "b": 204
+    },
+    {
+      "name": "Hafenstraße",
+      "price": 2800,
+      "rent": 200,
+      "houseprice": 2000,
+      "multiplier": 1.5,
+      "mortgage": 1400,
+      "fieldindex": 13,
+      "r": 204,
+      "g": 68,
+      "b": 204
+    },
+    {
+      "name": "Neue Straße",
+      "price": 3200,
+      "rent": 240,
+      "houseprice": 2000,
+      "multiplier": 1.5,
+      "mortgage": 1600,
+      "fieldindex": 14,
+      "r": 204,
+      "g": 68,
+      "b": 204
+    },
+    {
+      "name": "Münchner Straße",
+      "price": 3600,
+      "rent": 280,
+      "houseprice": 2000,
+      "multiplier": 1.5,
+      "mortgage": 1800,
+      "fieldindex": 16,
+      "r": 255,
+      "g": 128,
+      "b": 0
+    },
+    {
+      "name": "Berliner Straße",
+      "price": 4000,
+      "rent": 320,
+      "houseprice": 2000,
+      "multiplier": 1.5,
+      "mortgage": 2000,
+      "fieldindex": 19,
+      "r": 255,
+      "g": 128,
+      "b": 0
+    },
+    {
+      "name": "Wiener Straße",
+      "price": 3600,
+      "rent": 280,
+      "houseprice": 2000,
+      "multiplier": 1.5,
+      "mortgage": 1800,
+      "fieldindex": 18,
+      "r": 255,
+      "g": 128,
+      "b": 0
+    },
+    {
+      "name": "Theaterstraße",
+      "price": 4400,
+      "rent": 360,
+      "houseprice": 3000,
+      "multiplier": 1.5,
+      "mortgage": 2200,
+      "fieldindex": 21,
+      "r": 255,
+      "g": 0,
+      "b": 0
+    },
+    {
+      "name": "Museumstraße",
+      "price": 4400,
+      "rent": 360,
+      "houseprice": 3000,
+      "multiplier": 1.5,
+      "mortgage": 2200,
+      "fieldindex": 23,
+      "r": 255,
+      "g": 0,
+      "b": 0
+    },
+    {
+      "name": "Opernplatz",
+      "price": 4800,
+      "rent": 400,
+      "houseprice": 3000,
+      "multiplier": 1.5,
+      "mortgage": 2400,
+      "fieldindex": 24,
+      "r": 255,
+      "g": 0,
+      "b": 0
+    },
+    {
+      "name": "Lessingstraße",
+      "price": 5200,
+      "rent": 440,
+      "houseprice": 3000,
+      "multiplier": 1.5,
+      "mortgage": 2600,
+      "fieldindex": 26,
+      "r": 255,
+      "g": 255,
+      "b": 0
+    },
+    {
+      "name": "Schillerstraße",
+      "price": 5200,
+      "rent": 440,
+      "houseprice": 3000,
+      "multiplier": 1.5,
+      "mortgage": 2600,
+      "fieldindex": 27,
+      "r": 255,
+      "g": 255,
+      "b": 0
+    },
+    {
+      "name": "Goethestraße",
+      "price": 5600,
+      "rent": 440,
+      "houseprice": 3000,
+      "multiplier": 1.5,
+      "mortgage": 2800,
+      "fieldindex": 29,
+      "r": 255,
+      "g": 255,
+      "b": 0
+    },
+    {
+      "name": "Rathausplatz",
+      "price": 6000,
+      "rent": 520,
+      "houseprice": 4000,
+      "multiplier": 1.5,
+      "mortgage": 3000,
+      "fieldindex": 31,
+      "r": 51,
+      "g": 128,
+      "b": 51
+    },
+    {
+      "name": "Bahnhofstraße",
+      "price": 6400,
+      "rent": 560,
+      "houseprice": 4000,
+      "multiplier": 1.5,
+      "mortgage": 3200,
+      "fieldindex": 34,
+      "r": 51,
+      "g": 128,
+      "b": 51
+    },
+    {
+      "name": "Hauptstraße",
+      "price": 6000,
+      "rent": 520,
+      "houseprice": 4000,
+      "multiplier": 1.5,
+      "mortgage": 3000,
+      "fieldindex": 32,
+      "r": 51,
+      "g": 128,
+      "b": 51
+    },
+    {
+      "name": "Parkstraße",
+      "price": 7000,
+      "rent": 700,
+      "houseprice": 4000,
+      "multiplier": 1.5,
+      "mortgage": 3500,
+      "fieldindex": 37,
+      "r": 32,
+      "g": 32,
+      "b": 204
+    },
+    {
+      "name": "Schloßallee",
+      "price": 8000,
+      "rent": 1000,
+      "houseprice": 4000,
+      "multiplier": 1.5,
+      "mortgage": 4000,
+      "fieldindex": 39,
+      "r": 32,
+      "g": 32,
+      "b": 204
+    }
+  ],
+  "stations": [
+    {
+      "name": "Südbahnhof",
+      "price": 4000,
+      "rent": 500,
+      "multiplier": 2,
+      "mortgage": 2000,
+      "fieldindex": 5
+    },
+    {
+      "name": "Westbahnhof",
+      "price": 4000,
+      "rent": 500,
+      "multiplier": 2,
+      "mortgage": 2000,
+      "fieldindex": 15
+    },
+    {
+      "name": "Nordbahnhof",
+      "price": 4000,
+      "rent": 500,
+      "multiplier": 2,
+      "mortgage": 2000,
+      "fieldindex": 25
+    },
+    {
+      "name": "Hauptbahnhof",
+      "price": 4000,
+      "rent": 500,
+      "multiplier": 2,
+      "mortgage": 2000,
+      "fieldindex": 35
+    },
+    {
+      "name": "Wasser Werk",
+      "price": 3000,
+      "rent": 4,
+      "multiplier": 10,
+      "mortgage": 1500,
+      "fieldindex": 28
+    },
+    {
+      "name": "Elektrizitäts Werk",
+      "price": 3000,
+      "rent": 4,
+      "multiplier": 10,
+      "mortgage": 1500,
+      "fieldindex": 12
+    }
+  ],
+  "specialfield": [
+    {
+      "name": "Los",
+      "fieldindex": 0,
+      "execution": "getMoney",
+      "parameter": "8000"
+    },
+    {
+      "name": "Gemeinschaftsfeld",
+      "fieldindex": 2,
+      "execution": "getCard",
+      "parameter": "community"
+    },
+    {
+      "name": "Einkommensteuer",
+      "fieldindex": 4,
+      "execution": "looseMoney",
+      "parameter": "4000"
+    },
+    {
+      "name": "Ereignisfeld",
+      "fieldindex": 7,
+      "execution": "getCard",
+      "parameter": "event"
+    },
+    {
+      "name": "Nur zu Besuch | Gefängnis",
+      "fieldindex": 10,
+      "execution": "nothing",
+      "parameter": "null"
+    },
+    {
+      "name": "Gemeinschaftsfeld",
+      "fieldindex": 17,
+      "execution": "getCard",
+      "parameter": "community"
+    },
+    {
+      "name": "Frei Parken",
+      "fieldindex": 20,
+      "execution": "getMoney",
+      "parameter": "freeMoney"
+    },
+    {
+      "name": "Ereignisfeld",
+      "fieldindex": 22,
+      "execution": "getCard",
+      "parameter": "event"
+    },
+    {
+      "name": "Gehen Sie in das Gefängins",
+      "fieldindex": 30,
+      "execution": "goPrison",
+      "parameter": "null"
+    },
+    {
+      "name": "Gemeinschaftsfeld",
+      "fieldindex": 33,
+      "execution": "getCard",
+      "parameter": "community"
+    },
+    {
+      "name": "Ereignisfeld",
+      "fieldindex": 36,
+      "execution": "getCard",
+      "parameter": "event"
+    },
+    {
+      "name": "Zusatzsteuer",
+      "fieldindex": 38,
+      "execution": "looseMoney",
+      "parameter": "2000"
     }
   ]
 }

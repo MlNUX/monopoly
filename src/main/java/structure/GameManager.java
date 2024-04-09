@@ -3,20 +3,26 @@ package structure;
 import exception.CommandException;
 import exception.InputArgumentException;
 import exception.InputFileException;
+import org.json.simple.parser.ParseException;
 import playground.CommunityCard;
 import playground.EventCard;
 import playground.Field;
 import util.FileInputManager;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
+import java.util.Properties;
 import java.util.Random;
 import java.util.random.RandomGenerator;
 
 public class GameManager {
+    private static Properties gameProperties;
     private static final String DEFAULT_PATH = "src\\main\\resources\\config";
     private static final String INITIALIZING_PLAYER_ERROR = "Players not initialized!";
     private static final String EXIST_ERROR = "player doesn't exist!";
+    private static final String SEPERATOR_SYMBOL = ":";
+    private static final String INTEGER_LENGTH_FORMAT = "%2d";
     private Player[] players;
     private double startCapital;
     private GamePhase currentGamePhase;
@@ -26,9 +32,15 @@ public class GameManager {
     private List<List<Integer>> streetSets;
     private int activePlayer;
 
-    public GameManager(double startCapital) {
-        this.startCapital = startCapital;
+    public GameManager() {
         currentGamePhase = GamePhase.INITIALIZEPHASE;
+        gameProperties = new Properties();
+        try {
+            gameProperties.load(new FileInputStream(DEFAULT_PATH + "\\game.properties"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        this.startCapital = Double.parseDouble(gameProperties.getProperty("startCapital"));
     }
 
     public void setPlayers(String[] playerString) {
@@ -61,7 +73,7 @@ public class GameManager {
         return currentGamePhase;
     }
 
-    public void startGame() throws InputArgumentException, IOException, InputFileException {
+    public void startGame() throws InputArgumentException, IOException, InputFileException, ParseException {
         if (players == null) {
             throw new InputArgumentException(INITIALIZING_PLAYER_ERROR);
         }
@@ -111,5 +123,25 @@ public class GameManager {
         CommunityCard card = communityCards[random.nextInt(communityCards.length)];
         card.execute(player);
         return card.getInformationText() + ((card.getAdditionalText().isEmpty()) ? "" : System.lineSeparator() + card.getAdditionalText());
+    }
+
+    public String getNextFields() {
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < 12; i++) {
+            Field field = playGround[getActivePlayer().getCurrentField().getFieldIndex() + i + 1];
+            builder.append(String.format(INTEGER_LENGTH_FORMAT, field.getFieldIndex()))
+                    .append(SEPERATOR_SYMBOL)
+                    .append(field.getName())
+                    .append(System.lineSeparator());
+        }
+        return builder.substring(0, builder.length() - 1);
+    }
+
+    public String payBail() throws CommandException {
+        return getActivePlayer().payBail();
+    }
+
+    public static String getProperties(String prop) {
+        return gameProperties.getProperty(prop);
     }
 }
